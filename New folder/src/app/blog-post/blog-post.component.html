@@ -1,0 +1,30 @@
+
+   <div class="container mt-4">
+    <a class="btn btn-primary" routerLink="/">All blogs</a>
+    <div class="row card shadow-lg mt-5">
+      <div class="col-12 p-4">
+        <div *ngIf="post">
+          <div class="row">
+            <div class="col-md-4 d-flex justify-content-center align-items-center">
+              <img
+                [src]="post.image"
+                alt="{{ post.title }}"
+                class="img-fluid rounded-start mb-5"
+                style="max-height: 100%; max-width: 100%;"
+              />
+            </div>
+            <div class="col-md-8 text-">
+              <h2>{{ post.title }}</h2>
+              <p class="mt-2 mb-4">{{ post.content }}</p>
+              <small class="text-muted">Published on {{ post.publish_date }}</small>
+            </div>
+          </div>
+        </div>
+        <div *ngIf="!post">
+          <p>Loading...</p>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
