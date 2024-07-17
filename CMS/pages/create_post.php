@@ -85,7 +85,7 @@ $categories_result = $conn->query("SELECT * FROM categories");
 
                             <div class="form-group">
                                 <label for="image">Image</label>
-                                <input type="file" name="image" class="form-control-file" id="image" required>
+                                <input type="file" name="image" class="form-control-file" id="image">
                             </div>
                             <button type="submit" class="btn btn-primary">Create</button>
                         </form>

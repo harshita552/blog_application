@@ -15,7 +15,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
         echo json_encode($result->fetch_assoc());
     } else {
-        $sql = "SELECT id, title, LEFT(content, 100) as snippet, publish_date ,image FROM posts";
+        $sql = "SELECT 
+    p.id, 
+    p.title, 
+    LEFT(p.content, 100) as snippet, 
+    p.publish_date, 
+    p.image, 
+    p.category_id,
+    c.name as category_name
+FROM 
+    posts p
+JOIN 
+    categories c ON p.category_id = c.id;
+";
         $result = $conn->query($sql);
 
         $posts = [];

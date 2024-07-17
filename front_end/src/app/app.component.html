@@ -1,8 +1,7 @@
-
 <header>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-lg">
     <div class="container">
-      <a class="navbar-brand text-white">Angular Blog App</a>
+      <a class="navbar-brand text-white">Blog App</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -15,6 +14,24 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
+        <form class="form-inline my-2 my-lg-0 ml-auto">
+          <div class="input-group">
+            <input
+              type="text"
+              class="form-control border-pink"
+              placeholder="Search posts by category"
+              aria-label="Search"
+              aria-describedby="button-addon2"
+            />
+            <button
+              class="btn btn-outline-light"
+              type="submit"
+              id="button-addon2"
+            >
+              Search
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   </nav>
@@ -23,4 +40,3 @@
 <main>
   <router-outlet></router-outlet>
 </main>
-
