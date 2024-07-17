@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class BlogService {
-  private apiUrl = 'http://localhost/CMS/api/api.php';
+  private apiUrl = 'http://localhost/api/api.php';
 
   constructor(private http: HttpClient) {}
   getPosts(): Observable<any[]> {
